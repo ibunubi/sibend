@@ -2,23 +2,436 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <!--build:css css/styles.min.css-->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/font-awesome.min.css">
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="stylesheet" href="css/print.css">
-  <!--endbuild-->
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sibend - Dashboard</title>
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
+	<!--build:css css/styles.min.css-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/print.css">
+	<!--endbuild-->
+	<link rel="shortcut icon" type="image/png" href="./images/favicon.png">
 </head>
 
 <body>
-  <h1>This is a gulp starter!</h1>
-  
-  <!--build:js js/main.min.js -->
-  <script src="js/lib/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-  <!-- endbuild -->
-</body>
+	<div id="navbar-wrapper">
+        <header>
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">
+							<img src="./images/logo.png" alt="Logo Sibend">
+						</a>
+                    </div>
+                    <div id="navbar-collapse" class="collapse navbar-collapse">
 
+                        <ul class="nav navbar-nav navbar-right">
+							<li>
+								<a id="current-balance" href="#">
+									<span>current balance</span>
+									<strong>USD 389.54</strong>
+								</a>
+							</li>
+                            <li class="dropdown">
+                                <a id="notification" href="#" class="dropdown-toggle" data-toggle="dropdown" data-count="3">
+                                    <span class="fa fa-bell"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#">Server Error</a>
+                                        <a href="#">Warning Space</a>
+                                        <a href="#">Your latest ads got 1M viewers</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a id="message" href="#" class="dropdown-toggle" data-toggle="dropdown" data-count="1">
+                                    <span class="fa fa-envelope"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>
+                                        <a href="#">
+											<strong>PSD design</strong>
+											<p>Hello dude, we have talk about...</p>
+										</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <a id="user-profile" href="#" class="dropdown-toggle" data-toggle="dropdown">Hi, Meong Doe<img src="http://lorempixel.com/100/100/people/9/" class="img-responsive img-thumbnail img-circle"></a>
+                                <ul class="dropdown-menu dropdown-block dropdown-right" role="menu">
+                                    <li><a href="#">Profil edition</a></li>
+                                    <li><a href="#">Admin</a></li>
+                                    <li><a href="#">Logout</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div id="wrapper">
+        <div id="sidebar-wrapper">
+            <aside id="sidebar">
+                <ul id="sidemenu" class="sidebar-nav">
+                    <li>
+                        <a href="#">
+                            <span class="sidebar-icon"><i class="fa fa-dashboard"></i></span>
+                            <span class="sidebar-title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="accordion-toggle collapsed toggle-switch" data-toggle="collapse" href="#submenu-2">
+                            <span class="sidebar-icon"><i class="fa fa-flag"></i></span>
+                            <span class="sidebar-title">Campaigns</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul id="submenu-2" class="panel-collapse collapse panel-switch" role="menu">
+                            <li><a href="#"></i>Statistic</a></li>
+                            <li><a href="#"></i>Create New Ad</a></li>
+                            <li><a href="#"></i>Categories</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sidebar-icon"><i class="fa fa-yelp"></i></span>
+                            <span class="sidebar-title">Creatives</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sidebar-icon"><i class="fa fa-line-chart"></i></span>
+                            <span class="sidebar-title">Report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="sidebar-icon"><i class="fa fa-dollar"></i></span>
+                            <span class="sidebar-title">Payments</span>
+                        </a>
+                    </li>
+                </ul>
+            </aside>
+
+            <a href="" id="sidebar-toggle"><span class="oval"><span class="fa fa-chevron-left"></span></span> <span class="text">Collapse Menu</span></a>
+        </div>
+        <main id="page-content-wrapper" role="main">
+			<!--content - start-->
+            <div class="container-fluid">
+                <h3 class="content-title">Dashboard</h3>
+
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="cards">
+                            <div class="row content-sub-title">
+                                <div class="col-sm-7">
+                                    <span class="fa fa-bar-chart"></span> All Statistic
+                                </div>
+                                <div class="col-sm-5 content-filter">
+                                    <select>
+                                        <option value="-">period</option>
+                                        <option value="-">today</option>
+                                        <option value="-">yesterday</option>
+                                        <option value="-">this week</option>
+                                        <option value="-">this month</option>
+                                        <option value="-">last month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row drip">
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-dashboard"></span> Impression</p>
+                                    <div class="col-xs-6 number number-red">
+                                        850
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-share"></span> Clicks</p>
+                                    <div class="col-xs-6 number number-red">
+                                        4
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-trello"></span> CTR</p>
+                                    <div class="col-xs-6 number number-red">
+                                        0.05%
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-stack-overflow"></span> Spend</p>
+                                    <div class="col-xs-6 number number-red">
+                                        $ 8.05
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="stat-hide">
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-github"></span> Code</p>
+                                        <div class="col-xs-6 number number-red">
+                                            0.05%
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-support "></span> Support</p>
+                                        <div class="col-xs-6 number number-red">
+                                            1
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-wrap">
+                            <a href="#" class="btn btn-default btn-inactive btn-lg cards-more">view more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="cards">
+                            <div class="row content-sub-title">
+                                <div class="col-sm-7">
+                                    <span class="fa fa-bar-chart"></span> DGX Statistic
+                                </div>
+                                <div class="col-sm-5 content-filter">
+                                    <select>
+                                        <option value="-">period</option>
+                                        <option value="-">today</option>
+                                        <option value="-">yesterday</option>
+                                        <option value="-">this week</option>
+                                        <option value="-">this month</option>
+                                        <option value="-">last month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row drip">
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-dashboard"></span> Impression</p>
+                                    <div class="col-xs-6 number number-red">
+                                        850
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-share"></span> Clicks</p>
+                                    <div class="col-xs-6 number number-red">
+                                        4
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-trello"></span> CTR</p>
+                                    <div class="col-xs-6 number number-red">
+                                        0.05%
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-stack-overflow"></span> Spend</p>
+                                    <div class="col-xs-6 number number-red">
+                                        $ 8.05
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="stat-hide">
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-github"></span> Code</p>
+                                        <div class="col-xs-6 number number-red">
+                                            0.05%
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-support "></span> Support</p>
+                                        <div class="col-xs-6 number number-red">
+                                            1
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-wrap">
+                            <a href="#" class="btn btn-default btn-inactive btn-lg cards-more">view more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="cards">
+                            <div class="row content-sub-title">
+                                <div class="col-sm-7">
+                                    <span class="fa fa-bar-chart"></span> Criterio Statistic
+                                </div>
+                                <div class="col-sm-5 content-filter">
+                                    <select>
+                                        <option value="-">period</option>
+                                        <option value="-">today</option>
+                                        <option value="-">yesterday</option>
+                                        <option value="-">this week</option>
+                                        <option value="-">this month</option>
+                                        <option value="-">last month</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row drip">
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-dashboard"></span> Impression</p>
+                                    <div class="col-xs-6 number number-red">
+                                        850
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-share"></span> Clicks</p>
+                                    <div class="col-xs-6 number number-red">
+                                        4
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-trello"></span> CTR</p>
+                                    <div class="col-xs-6 number number-red">
+                                        0.05%
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <p class="stat-cat"><span class="fa fa-stack-overflow"></span> Spend</p>
+                                    <div class="col-xs-6 number number-red">
+                                        $ 8.05
+                                    </div>
+                                    <div class="col-xs-6 number number-white number-green-block">
+                                        100%
+                                    </div>
+                                </div>
+                                <div class="stat-hide">
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-github"></span> Code</p>
+                                        <div class="col-xs-6 number number-red">
+                                            0.05%
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <p class="stat-cat"><span class="fa fa-support "></span> Support</p>
+                                        <div class="col-xs-6 number number-red">
+                                            1
+                                        </div>
+                                        <div class="col-xs-6 number number-white number-green-block">
+                                            100%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="more-wrap">
+                            <a href="#" class="btn btn-default btn-inactive btn-lg cards-more">view more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="cards more-space">
+                            <div class="row content-sub-title">
+                                <div class="col-sm-7">
+                                    <span class="fa fa-sliders"></span> Performance Overview
+                                </div>
+                                <div class="col-sm-5 content-filter">
+                                    <a href=""><span class="fa fa-calendar-o"></span> September 1, 2016 - September 30, 2016 <span class="fa fa-angle-down"></span></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="perform-chart"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row section">
+                    <div class="col-md-offset-2 col-md-8">
+                        <div class="cards inline">
+                            <ul class="stat-counter">
+                                <li>
+                                    <span class="type">Impression</span>
+                                    <strong>8,500</strong>
+                                </li>
+                                <li>
+                                    <span class="type">Clicks</span>
+                                    <strong>43</strong>
+                                </li>
+                                <li>
+                                    <span class="type">Unique Impression</span>
+                                    <strong>6,787</strong>
+                                </li>
+                                <li>
+                                    <span class="type">Unique Clicks</span>
+                                    <strong>30</strong>
+                                </li>
+                                <li>
+                                    <span class="type">Conversion</span>
+                                    <strong>10</strong>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			<!--content - end-->
+        </main>
+    </div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <!--<script src="https://code.highcharts.com/modules/exporting.js"></script>-->
+	<!--build:js js/main.min.js -->
+	<script src="js/lib/bootstrap.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- endbuild -->
+</body>
 </html>
