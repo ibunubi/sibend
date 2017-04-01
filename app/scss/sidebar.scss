@@ -1,0 +1,334 @@
+//colors
+$brand_name_bg: #f8f8f8;
+@import "themes/default.scss";
+@import "themes/dark.scss";
+
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+:focus {
+	outline: none;
+}
+.row {
+	margin-right: 0;
+	margin-left: 0;
+}
+// .navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+.side-menu {
+	font-weight: 300;
+	position: fixed;
+	width: 300px;
+	height: 100%;
+	background-color: $side_base_color;
+	border-right: 1px solid $side_border_color;
+	.navbar {
+		border: none;
+	}
+	.navbar-header {
+		width: 100%;
+		border-bottom: 1px solid $side_border_color;
+	}
+	.navbar-nav {
+		li {
+			display: block;
+			width: 100%;
+			border-bottom: 1px solid $side_border_color;
+			background-color: $side_li_bg;
+			a {
+				padding: 15px;
+				color: $side_li_color;
+				&:hover, &:focus{
+					color: $side_li_color_hv;
+					.fa{
+						color: $side_bright_color;
+					}
+				}
+				.fa {
+					padding-right: 10px;
+				}
+			}
+		}
+		.active a {
+			background-color: transparent;
+			margin-right: -1px;
+			border-right: 5px solid $side_bright_color;
+			color: $side_li_color_hv;
+			&:hover{
+				background-color: $side_border_color;
+				color: $side_li_color_hv;
+			}
+		}
+	}
+	#dropdown {
+		border: 0;
+		margin-bottom: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		// background-color: transparent;
+		//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+		box-shadow: none;
+		.caret {
+			float: right;
+			margin: 9px 5px 0;
+		}
+		.indicator {
+			float: right;
+		}
+		> a {
+			border-bottom: 1px solid $side_border_color;
+		}
+		.panel-body {
+			padding: 0;
+			background-color: $side_btn_color;
+			.navbar-nav {
+				width: 100%;
+				li {
+					padding-left: 15px;
+					border-bottom: 1px solid $side_border_color;
+					&:last-child {
+						border-bottom: none;
+					}
+				}
+			}
+			.panel-body {
+				margin-left: -15px;
+				li {
+					padding-left: 30px;
+					&:last-child {
+						border-bottom: 1px solid $side_border_color;
+					}
+				}
+			}
+			.panel > a {
+				margin-left: -20px;
+				padding-left: 35px;
+			}
+		}
+	}
+	#search-trigger {
+		background-color: $side_btn_color;
+		border: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 15px 18px;
+	}
+	.brand-name-wrapper {
+		min-height: 50px;
+        background-color: $brand_name_bg;
+		.navbar-brand {
+			display: block;
+            // padding: 3px; // with image
+			font-family: 'Lobster', cursive;
+			letter-spacing: 1px;
+			.bright{
+				color: $side_bright_color;
+			}
+		}
+	}
+	#search {
+		position: relative;
+		z-index: 1000;
+		.panel-body {
+			padding: 0;
+			.navbar-form {
+				padding: 0;
+				padding-right: 50px;
+				width: 100%;
+				margin: 0;
+				position: relative;
+				border-top: 1px solid $side_border_color;
+				.form-group {
+					width: 100%;
+					position: relative;
+				}
+				input {
+					border: 0;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+					//Instead of the line below you could use @include box-shadow($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10)
+					box-shadow: none;
+					width: 100%;
+					height: 50px;
+				}
+				.btn {
+					position: absolute;
+					right: 0;
+					top: 0;
+					border: 0;
+					//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+					border-radius: 0;
+					background-color: $side_btn_color;
+					padding: 15px 18px;
+				}
+			}
+		}
+	}
+}
+.side-body {
+	margin-left: 310px;
+}
+@media(max-width: 768px) {
+	.side-menu {
+		position: relative;
+		width: 100%;
+		height: 0;
+		border-right: 0;
+		border-bottom: 1px solid $side_border_color;
+		.brand-name-wrapper .navbar-brand {
+			display: inline-block;
+		}
+	}
+	@-moz-keyframes slidein {
+		0% {
+			left: -300px;
+		}
+		100% {
+			left: 10px;
+		}
+	}
+	@-webkit-keyframes slidein {
+		0% {
+			left: -300px;
+		}
+		100% {
+			left: 10px;
+		}
+	}
+	@keyframes slidein {
+		0% {
+			left: -300px;
+		}
+		100% {
+			left: 10px;
+		}
+	}
+	@-moz-keyframes slideout {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: -300px;
+		}
+	}
+	@-webkit-keyframes slideout {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: -300px;
+		}
+	}
+	@keyframes slideout {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: -300px;
+		}
+	}
+	@-moz-keyframes bodyslidein {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: 300px;
+		}
+	}
+	@-webkit-keyframes bodyslidein {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: 300px;
+		}
+	}
+	@keyframes bodyslidein {
+		0% {
+			left: 0;
+		}
+		100% {
+			left: 300px;
+		}
+	}
+	@-moz-keyframes bodyslideout {
+		0% {
+			left: 300px;
+		}
+		100% {
+			left: 0;
+		}
+	}
+	@-webkit-keyframes bodyslideout {
+		0% {
+			left: 300px;
+		}
+		100% {
+			left: 0;
+		}
+	}
+	@keyframes bodyslideout {
+		0% {
+			left: 300px;
+		}
+		100% {
+			left: 0;
+		}
+	}
+	.side-body {
+		margin-left: 5px;
+		margin-top: 70px;
+		position: relative;
+		animation: bodyslideout 300ms forwards;
+		//Instead of the line below you could use @include transform-style($style)
+		transform-style: preserve-3d;
+	}
+	.body-slide-in {
+		animation: bodyslidein 300ms forwards;
+		//Instead of the line below you could use @include transform-style($style)
+		transform-style: preserve-3d;
+	}
+	.navbar-toggle {
+		border: 0;
+		float: left;
+		padding: 18px;
+		margin: 0;
+		//Instead of the line below you could use @include border-radius($radius, $vertical-radius)
+		border-radius: 0;
+		background-color: $side_btn_color;
+	}
+	.navbar-header {
+		position: fixed;
+		z-index: 3;
+		background-color: $side_base_color;
+	}
+	.side-menu-container > .navbar-nav {
+		position: fixed;
+		left: -300px;
+		width: 300px;
+		top: 43px;
+		height: 100%;
+		border-right: 1px solid $side_border_color;
+		background-color: $side_base_color;
+		animation: slideout 300ms forwards;
+		//Instead of the line below you could use @include transform-style($style)
+		transform-style: preserve-3d;
+		&.slide-in {
+			animation: slidein 300ms forwards;
+			//Instead of the line below you could use @include transform-style($style)
+			transform-style: preserve-3d;
+		}
+	}
+	#search .panel-body .navbar-form {
+		border-bottom: 0;
+		.form-group {
+			margin: 0;
+		}
+	}
+	#dropdown .panel-body .navbar-nav {
+		margin: 0;
+	}
+}
