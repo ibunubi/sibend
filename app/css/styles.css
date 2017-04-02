@@ -86,7 +86,7 @@ body {
     margin-right: -1px;
     border-right: 5px solid #66BB6A;
     color: #cdcdcd; }
-    .side-menu .navbar-nav .active a:hover {
+    .side-menu .navbar-nav .active a:hover, .side-menu .navbar-nav .active a:focus {
       background-color: #333;
       color: #cdcdcd; }
   .side-menu #dropdown {

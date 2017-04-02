@@ -54,7 +54,7 @@ body{
 			margin-right: -1px;
 			border-right: 5px solid $side_bright_color;
 			color: $side_li_color_hv;
-			&:hover{
+			&:hover, &:focus{
 				background-color: $side_border_color;
 				color: $side_li_color_hv;
 			}
