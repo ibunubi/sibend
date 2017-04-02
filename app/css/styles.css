@@ -130,7 +130,8 @@ body {
     padding: 15px 18px; }
   .side-menu .brand-name-wrapper {
     min-height: 50px;
-    background-color: #f8f8f8; }
+    background-color: #f8f8f8;
+    border-bottom-color: none; }
     .side-menu .brand-name-wrapper .navbar-brand {
       display: block;
       font-family: 'Lobster', cursive;
@@ -139,7 +140,8 @@ body {
         color: #66BB6A; }
   .side-menu #search {
     position: relative;
-    z-index: 1000; }
+    z-index: 1000;
+    border-top-color: transparent; }
     .side-menu #search .panel-body {
       padding: 0; }
       .side-menu #search .panel-body .navbar-form {
@@ -168,7 +170,7 @@ body {
           padding: 15px 18px; }
 
 .side-body {
-  margin-left: 310px; }
+  margin-left: 285px; }
 
 @media (max-width: 768px) {
   .side-menu {
@@ -278,3 +280,10 @@ body {
       margin: 0; }
   #dropdown .panel-body .navbar-nav {
     margin: 0; } }
+
+.page-title {
+  font-size: 2em;
+  padding: 10px 0px; }
+
+.box-title {
+  font-size: 1.2em; }

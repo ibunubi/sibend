@@ -119,6 +119,7 @@ body{
 	.brand-name-wrapper {
 		min-height: 50px;
         background-color: $brand_name_bg;
+		border-bottom-color: none;
 		.navbar-brand {
 			display: block;
             // padding: 3px; // with image
@@ -132,6 +133,7 @@ body{
 	#search {
 		position: relative;
 		z-index: 1000;
+		border-top-color: transparent;
 		.panel-body {
 			padding: 0;
 			.navbar-form {
@@ -169,7 +171,7 @@ body{
 	}
 }
 .side-body {
-	margin-left: 310px;
+	margin-left: 285px;
 }
 @media(max-width: 768px) {
 	.side-menu {
